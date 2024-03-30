@@ -14,7 +14,7 @@ useServerHead({
 });
 
 useHead({
-	titleTemplate: "%siteName",
+	titleTemplate: "ComradeTurtle Gateway",
 	htmlAttrs: {
 		lang: "en",
 	},

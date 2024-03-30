@@ -1,12 +1,12 @@
 export default defineEventHandler(() => {
 	return {
-		name: "Tougrel",
-		avatar_url: "https://cdn.tougrel.dev/gateway/profiles/tougrel.webp",
+		name: "ComradeTurtle",
+		avatar_url: "https://avatars.githubusercontent.com/u/42468982?s=400&u=9a61aa8d3aeabb9484eea6a62909336926c91666&v=4",
 		social: [
 			{
 				icon: "mdi:email",
-				value: "me@tougrel.dev",
-				to: "mailto:me@tougrel.dev",
+				value: "giorgosd1300@shadowct.eu",
+				to: "mailto:giorgosd1300@shadowct.eu",
 				colors: {
 					base: "text-primary-700",
 					hover: "hover:text-primary-500",
@@ -14,8 +14,8 @@ export default defineEventHandler(() => {
 			},
 			{
 				icon: "mdi:github",
-				value: "Tougrel",
-				to: "https://github.com/Tougrel",
+				value: "ComradeTurtle",
+				to: "https://github.com/ComradeTurtle",
 				colors: {
 					base: "text-gray-500",
 					hover: "hover:text-gray-400",
@@ -23,22 +23,13 @@ export default defineEventHandler(() => {
 			},
 			{
 				icon: "mdi:discord",
-				value: "Workshop",
-				to: "https://discord.gg/8etg59B5eM",
+				value: "ComradeTurtle",
+				to: "",
 				colors: {
 					base: "text-discord",
 					hover: "hover:text-discord",
 				},
-			},
-			{
-				icon: "mdi:twitter",
-				value: "@Tougrel",
-				to: "https://twitter.com/Tougrel",
-				colors: {
-					base: "text-twitter",
-					hover: "hover:text-twitter",
-				},
-			},
+			}
 		],
 	} as User;
 });
