@@ -134,16 +134,9 @@ const projects: Project[] = [
 
 export default defineEventHandler(async (event) => {
 	const config = useRuntimeConfig();
-	const context = event.context;
-	const isCloudflare = "cloudflare" in context;
 
 	let results;
-	if (isCloudflare) {
-		const database: D1Database = context.cloudflare.env.DATABASE;
-		results = await database
-			.prepare("SELECT name, author, author_name, description, json(links) as links FROM Projects")
-			.run();
-	} else if (config.public.usesExternalAPI) {
+	if (config.public.usesExternalAPI) {
 		if (!config.public.externalAPIAddress) {
 			createError({
 				name: "Fetching Data",
