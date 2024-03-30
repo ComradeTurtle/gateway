@@ -1,6 +1,187 @@
 <script setup lang="ts">
-const { data: user } = await useFetch("/api/user");
-const { data: projects } = await useFetch("/api/projects");
+const user = useState("user");
+const projects = useState("projects");
+
+user.value = {
+	name: "ComradeTurtle",
+	avatar_url: "https://avatars.githubusercontent.com/u/42468982?s=400&u=9a61aa8d3aeabb9484eea6a62909336926c91666&v=4",
+	social: [
+		{
+			icon: "mdi:email",
+			value: "giorgosd1300@shadowct.eu",
+			to: "mailto:giorgosd1300@shadowct.eu",
+			colors: {
+				base: "text-primary-700",
+				hover: "hover:text-primary-500",
+			},
+		},
+		{
+			icon: "mdi:github",
+			value: "ComradeTurtle",
+			to: "https://github.com/ComradeTurtle",
+			colors: {
+				base: "text-gray-500",
+				hover: "hover:text-gray-400",
+			},
+		},
+		{
+			icon: "mdi:discord",
+			value: "ComradeTurtle",
+			to: "",
+			colors: {
+				base: "text-discord",
+				hover: "hover:text-discord",
+			},
+		}
+	],
+}
+
+projects.value = [
+	{
+		name: "apousies.gr",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"The aim of the apousies.gr project was to organize the daily procedures that directly concern all students such as performance, absences and their schedule. It attended and was presented at the 15th Annual Computer Science Student Conference.",
+		links: [
+			{
+				name: "Conference Proposal",
+				icon: "mdi:file-document-multiple-outline",
+				to: "https://zipline.comradeturtle.dev/go/apousies_proposal",
+				active: true,
+			},
+			{
+				name: "Conference Presentation",
+				icon: "mdi:file-powerpoint-outline",
+				to: "https://zipline.comradeturtle.dev/go/apousies_presentation",
+				active: false,
+			},
+		],
+	},
+	{
+		name: "Thesstrans.com Gallery & Interactive Map",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"A pair of applications developed for the thesstrans.com website.",
+		links: [
+			{
+				name: "Gallery",
+				icon: "mdi:web",
+				to: "https://gallery.thesstrans.com",
+				active: true,
+			},
+			{
+				name: "Interactive Map",
+				icon: "mdi:web",
+				to: "https://oasthmap.comradeturtle.dev",
+				active: false,
+			},
+		],
+	},
+	{
+		name: "Ham Radio",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"A Website that allows ham radio license candidates in Greece to practice for their exams. Follows the ministry's official curriculum and testing format.",
+		links: [
+			{
+				name: "Website",
+				icon: "mdi:web",
+				to: "https://hamradio.comradeturtle.dev/",
+				active: true,
+			},
+			{
+				name: "GitHub Repository",
+				icon: "mdi:github",
+				to: "https://github.com/ComradeTurtle/hamradio-frontend",
+				active: true,
+			},
+		],
+	},
+	{
+		name: "IPv6 Ready",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"A simple website that offers IPv6 and IPv4 connectivity testing.",
+		links: [
+			{
+				name: "Website",
+				icon: "mdi:web",
+				to: "https://ipv6ready.comradeturtle.dev/",
+				active: true,
+			},
+		],
+	},
+	{
+		name: "PlateResolver",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"Very small web application for resolving Greek license plates to the registration prefecture.",
+		links: [
+			{
+				name: "Website",
+				icon: "mdi:web",
+				to: "https://plates.comradeturtle.dev/",
+				active: true,
+			},
+			{
+				name: "GitHub Repository",
+				icon: "mdi:github",
+				to: "https://github.com/ComradeTurtle/plateresolver",
+				active: true,
+			},
+		],
+	},
+	{
+		name: "NodeBOINC",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"A Node.js module that interfaces with local and remote BOINC Manager instances. It is currently work in progress and will be released soon™.",
+		links: [
+		],
+	},
+	{
+		name: "PrimeGrid Challenge Statistics",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"A website for showing challenge standings and statistics for the PrimeGrid BOINC project.",
+		links: [
+			{
+				name: "Website",
+				icon: "mdi:web",
+				to: "https://pg.comradeturtle.dev/",
+				active: true,
+			},
+			{
+				name: "GitHub Repository",
+				icon: "mdi:github",
+				to: "https://github.com/ComradeTurtle/pgstat",
+				active: true,
+			},
+		],
+	},
+	{
+		name: "NEOSResolver",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"NEOSResolver was a user and session lookup tool for the game NeosVR.",
+		links: [
+			{
+				name: "Website",
+				icon: "mdi:web",
+				to: "https://neos.hgcommunity.net/",
+				active: true,
+			}
+		],
+	}
+];
 
 useServerHead({
 	title: "Gateway",
