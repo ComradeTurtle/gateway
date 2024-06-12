@@ -1,8 +1,5 @@
 <script setup lang="ts">
-const user = useState("user");
-const projects = useState("projects");
-
-user.value = {
+const user = ref({
 	name: "ComradeTurtle",
 	avatar_url: "https://avatars.githubusercontent.com/u/42468982?s=400&u=9a61aa8d3aeabb9484eea6a62909336926c91666&v=4",
 	social: [
@@ -34,9 +31,24 @@ user.value = {
 			},
 		}
 	],
-}
-
-projects.value = [
+});
+	
+const projects = ref([
+	{
+		name: "AS215734",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"My own ASN which I manage, created as a learning opportunity on routing, BGP, and advanced networking in general.",
+		links: [
+			{
+				name: "BGPTools",
+				icon: "mdi:web",
+				to: "https://bgp.tools/as/215734",
+				active: true,
+			},
+		],
+	},
 	{
 		name: "apousies.gr",
 		author: true,
@@ -72,9 +84,15 @@ projects.value = [
 				active: true,
 			},
 			{
-				name: "Interactive Map",
+				name: "Interactive Map - OASTH",
 				icon: "mdi:web",
 				to: "https://oasthmap.comradeturtle.dev",
+				active: false,
+			},
+			{
+				name: "Interactive Map - OASA",
+				icon: "mdi:web",
+				to: "https://oasamap.comradeturtle.dev",
 				active: false,
 			},
 		],
@@ -181,7 +199,7 @@ projects.value = [
 			}
 		],
 	}
-];
+]);
 
 useServerHead({
 	title: "Gateway",
