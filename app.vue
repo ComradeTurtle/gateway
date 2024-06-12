@@ -42,9 +42,15 @@ const projects = ref([
 			"My own ASN which I manage, created as a learning opportunity on routing, BGP, and advanced networking in general.",
 		links: [
 			{
-				name: "BGPTools",
+				name: "bgp.tools",
 				icon: "mdi:web",
 				to: "https://bgp.tools/as/215734",
+				active: true,
+			},
+			{
+				name: "Looking Glass",
+				icon: "mdi:magnify",
+				to: "https://lg.as215734.net",
 				active: true,
 			},
 		],
