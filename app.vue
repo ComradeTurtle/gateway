@@ -76,6 +76,33 @@ const projects = ref([
 			},
 		],
 	},
+		{
+		name: "Meteora-Weather",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"A network of weather stations providing real-time weather, webcam and air quality data. The network currently consists of 1 station in Thessaloniki and 2 in Athens.",
+		links: [
+			{
+				name: "Thessaloniki Station",
+				icon: "mdi:web",
+				to: "https://meteora-weather.gr",
+				active: true,
+			},
+			{
+				name: "Keratsini, Athens Station",
+				icon: "mdi:web",
+				to: "https://keratsini.meteora-weather.gr",
+				active: false,
+			},
+			{
+				name: "Nikaia, Athens Station",
+				icon: "mdi:web",
+				to: "https://nikaia.meteora-weather.gr",
+				active: false,
+			},
+		],
+	},
 	{
 		name: "Thesstrans.com Gallery & Interactive Map",
 		author: true,
