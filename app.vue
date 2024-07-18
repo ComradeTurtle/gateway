@@ -194,6 +194,12 @@ const projects = ref([
 		description:
 			"A Node.js module that interfaces with local and remote BOINC Manager instances. It is currently work in progress and will be released soon™.",
 		links: [
+			{
+				name: "GitHub Repository",
+				icon: "mdi:github",
+				to: "https://github.com/ComradeTurtle/nodeboinc",
+				active: true,
+			}
 		],
 	},
 	{
