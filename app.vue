@@ -199,6 +199,12 @@ const projects = ref([
 				icon: "mdi:github",
 				to: "https://github.com/ComradeTurtle/nodeboinc",
 				active: true,
+			},
+			{
+				name: "NPM Package",
+				icon: "mdi:npm-variant-outline",
+				to: "https://www.npmjs.com/package/nodeboinc",
+				active: true,
 			}
 		],
 	},
