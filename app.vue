@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const user = ref({
-	name: "ComradeTurtle",
+	name: "Giorgos Karampitsakis",
 	avatar_url: "https://avatars.githubusercontent.com/u/42468982?s=400&u=9a61aa8d3aeabb9484eea6a62909336926c91666&v=4",
 	social: [
 		{
@@ -35,22 +35,34 @@ const user = ref({
 	
 const projects = ref([
 	{
-		name: "AS215734",
+		name: "Thesstrans.com",
 		author: true,
 		author_name: "ComradeTurtle",
 		description:
-			"My own ASN which I manage, created as a learning opportunity on routing, BGP, and advanced networking in general.",
+			"A suite of applications developed for the thesstrans.com website.",
 		links: [
 			{
-				name: "bgp.tools",
+				name: "Gallery",
 				icon: "mdi:web",
-				to: "https://bgp.tools/as/215734",
+				to: "https://gallery.thesstrans.com",
 				active: true,
 			},
 			{
-				name: "Looking Glass",
-				icon: "mdi:magnify",
-				to: "https://lg.as215734.net",
+				name: "Registry",
+				icon: "mdi:web",
+				to: "https://registry.thesstrans.com",
+				active: true,
+			},
+			{
+				name: "Interactive Map - OASTH",
+				icon: "mdi:web",
+				to: "https://oasthmap.comradeturtle.dev",
+				active: true,
+			},
+			{
+				name: "Interactive Map - OASA",
+				icon: "mdi:web",
+				to: "https://oasamap.comradeturtle.dev",
 				active: true,
 			},
 		],
@@ -81,53 +93,61 @@ const projects = ref([
 		author: true,
 		author_name: "ComradeTurtle",
 		description:
-			"A network of weather stations providing real-time weather, webcam and air quality data. The network currently consists of 1 station in Thessaloniki and 2 in Athens.",
+			"Meteora-Weather was a network of weather stations providing real-time weather, webcam and air quality data. The network consisted of 1 station in Thessaloniki and 2 in Athens.",
+		links: [],
+	},
+	{
+		name: "AS215734",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"My own ASN which I manage, created as a learning opportunity on routing, BGP, and advanced networking in general.",
 		links: [
 			{
-				name: "Thessaloniki Station",
+				name: "bgp.tools",
 				icon: "mdi:web",
-				to: "https://meteora-weather.gr",
+				to: "https://bgp.tools/as/215734",
 				active: true,
 			},
 			{
-				name: "Keratsini, Athens Station",
-				icon: "mdi:web",
-				to: "https://keratsini.meteora-weather.gr",
-				active: false,
-			},
-			{
-				name: "Nikaia, Athens Station",
-				icon: "mdi:web",
-				to: "https://nikaia.meteora-weather.gr",
-				active: false,
+				name: "Looking Glass",
+				icon: "mdi:magnify",
+				to: "https://lg.as215734.net",
+				active: true,
 			},
 		],
 	},
 	{
-		name: "Thesstrans.com Gallery & Interactive Map",
+		name: "NTP Servers",
 		author: true,
 		author_name: "ComradeTurtle",
 		description:
-			"A pair of applications developed for the thesstrans.com website.",
+			"Stratum 1 (GPS + PPS) chrony NTP servers maintained by me and some friends. They participate in the NTP Pool Project.",
 		links: [
 			{
-				name: "Gallery",
+				name: "Statistics Page",
 				icon: "mdi:web",
-				to: "https://gallery.thesstrans.com",
+				to: "https://ntp.comradeturtle.dev",
 				active: true,
 			},
 			{
-				name: "Interactive Map - OASTH",
+				name: "NTP Server 1",
 				icon: "mdi:web",
-				to: "https://oasthmap.comradeturtle.dev",
-				active: false,
+				to: "https://www.ntppool.org/scores/44.32.63.52",
+				active: true,
 			},
 			{
-				name: "Interactive Map - OASA",
+				name: "NTP Server 2",
 				icon: "mdi:web",
-				to: "https://oasamap.comradeturtle.dev",
-				active: false,
+				to: "https://www.ntppool.org/scores/81.2.191.169",
+				active: true,
 			},
+			{
+				name: "NTP Server 3",
+				icon: "mdi:web",
+				to: "https://www.ntppool.org/scores/81.2.191.34",
+				active: true,
+			}
 		],
 	},
 	{
@@ -149,6 +169,27 @@ const projects = ref([
 				to: "https://github.com/ComradeTurtle/hamradio-frontend",
 				active: true,
 			},
+		],
+	},
+	{
+		name: "NodeBOINC",
+		author: true,
+		author_name: "ComradeTurtle",
+		description:
+			"A Node.js module that interfaces with local and remote BOINC Manager instances. It is currently work in progress and will be released soon™.",
+		links: [
+			{
+				name: "GitHub Repository",
+				icon: "mdi:github",
+				to: "https://github.com/ComradeTurtle/nodeboinc",
+				active: true,
+			},
+			{
+				name: "NPM Package",
+				icon: "mdi:npm-variant-outline",
+				to: "https://www.npmjs.com/package/nodeboinc",
+				active: true,
+			}
 		],
 	},
 	{
@@ -185,27 +226,6 @@ const projects = ref([
 				to: "https://github.com/ComradeTurtle/plateresolver",
 				active: true,
 			},
-		],
-	},
-	{
-		name: "NodeBOINC",
-		author: true,
-		author_name: "ComradeTurtle",
-		description:
-			"A Node.js module that interfaces with local and remote BOINC Manager instances. It is currently work in progress and will be released soon™.",
-		links: [
-			{
-				name: "GitHub Repository",
-				icon: "mdi:github",
-				to: "https://github.com/ComradeTurtle/nodeboinc",
-				active: true,
-			},
-			{
-				name: "NPM Package",
-				icon: "mdi:npm-variant-outline",
-				to: "https://www.npmjs.com/package/nodeboinc",
-				active: true,
-			}
 		],
 	},
 	{
